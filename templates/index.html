@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Song Recommendation System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <i class="fa-brands fa-spotify spotify-logo"></i>
+
+        <h1>Spotify Song Recommendation System</h1>
+
+        <p>Discover songs similar to your favourite music.</p>
+
+    </div>
+
+    <div class="search-box">
+
+    <label>Select a Song</label>
+
+    <form method="POST">
+
+        <select name="song" required>
+
+            <option value="">Choose your favourite song</option>
+
+            {% for song in songs %}
+
+            <option value="{{ song }}"
+            {% if selected_song==song %}selected{% endif %}>
+
+            {{ song }}
+
+            </option>
+
+            {% endfor %}
+
+        </select>
+
+        <button type="submit">
+            <i class="fa-solid fa-music"></i>
+            Recommend Songs
+        </button>
+
+    </form>
+
+</div>
+    {% if recommendations %}
+
+    <div class="recommendation-section">
+
+        <h2>Recommended Songs</h2>
+
+        <div class="cards">
+
+            {% for song in recommendations %}
+
+            <div class="card">
+
+                <div class="music-icon">
+
+                    🎵
+
+                </div>
+
+                <h3>{{ song.name }}</h3>
+
+                <p>
+
+                    <strong>Artist</strong>
+
+                    <br>
+
+                    {{ song.artist }}
+
+                </p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+
+</html>

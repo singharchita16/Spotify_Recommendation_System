@@ -1,0 +1,124 @@
+body {
+    background: #121212;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 40px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.spotify-logo {
+    font-size: 80px;
+    color: #1DB954;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: #1DB954;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #d3d3d3;
+    font-size: 18px;
+}
+
+.search-box {
+    background: #181818;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(29, 185, 84, 0.25);
+    margin-bottom: 40px;
+}
+
+.search-box label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.search-box form {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-box select {
+    width: 500px;
+    height: 50px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box button {
+    width: 220px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    background: #1DB954;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #18a74a;
+}
+
+.recommendation-section {
+    margin-top: 40px;
+}
+
+.recommendation-section h2 {
+    color: #1DB954;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #181818;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.music-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    color: #1DB954;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #d3d3d3;
+}
